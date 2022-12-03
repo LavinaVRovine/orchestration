@@ -39,7 +39,7 @@ storage:
   _is_anonymous: false
   block_type_slug: github
   _block_type_slug: github
-path: ./src/prefect/
+path: ''
 entrypoint: flows\orchestration\maintenance.py:maintenance
 parameter_openapi_schema:
   title: Parameters
