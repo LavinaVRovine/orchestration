@@ -1,0 +1,64 @@
+###
+### A complete description of a Prefect Deployment for flow 'jaffle-shop-ingest-transform'
+###
+name: k8s
+description: null
+version: a0d7bc027a49b6ca1bb5d6cf0fd0b013
+# The work queue that will handle this deployment's runs
+work_queue_name: k8s
+tags:
+- parent
+parameters: {}
+schedule: null
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: jaffle-shop-ingest-transform
+manifest_path: null
+infrastructure:
+  type: process
+  env:
+    PREFECT_LOGGING_LEVEL: DEBUG
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 9880a9ba-7598-4bf7-9946-fb1175d5f0fb
+  _block_document_name: default
+  _is_anonymous: false
+  block_type_slug: process
+  _block_type_slug: process
+storage:
+  repository: https://github.com/LavinaVRovine/orchestration/tree/master/src/prefect
+  reference: null
+  access_token: '**********'
+  _block_document_id: a27896ad-653f-4930-bad4-da28081752a9
+  _block_document_name: random-git
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: flows\orchestration\jaffle_shop\ingest_transform.py:jaffle_shop_ingest_transform
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    start_date:
+      title: start_date
+      default: '2022-11-01'
+      type: string
+      format: date
+    end_date:
+      title: end_date
+      default: '2022-12-03'
+      type: string
+      format: date
+    dataset_size:
+      title: dataset_size
+      default: 10000
+      type: integer
+  required: null
+  definitions: null

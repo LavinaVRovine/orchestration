@@ -1,0 +1,49 @@
+###
+### A complete description of a Prefect Deployment for flow 'maintenance'
+###
+name: k8s
+description: null
+version: f3deca7e8a9251bc4beb8f3bc6d9d42e
+# The work queue that will handle this deployment's runs
+work_queue_name: k8s
+tags: []
+parameters: {}
+schedule: null
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: maintenance
+manifest_path: null
+infrastructure:
+  type: process
+  env:
+    PREFECT_LOGGING_LEVEL: DEBUG
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 9880a9ba-7598-4bf7-9946-fb1175d5f0fb
+  _block_document_name: default
+  _is_anonymous: false
+  block_type_slug: process
+  _block_type_slug: process
+storage:
+  repository: https://github.com/LavinaVRovine/orchestration/tree/master/src/prefect
+  reference: null
+  access_token: '**********'
+  _block_document_id: a27896ad-653f-4930-bad4-da28081752a9
+  _block_document_name: random-git
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: flows\orchestration\maintenance.py:maintenance
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
