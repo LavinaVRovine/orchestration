@@ -11,14 +11,14 @@ deploy_agent = True
 image_agent = "prefecthq/prefect:2-python3.9"
 k8s_namespace = "prefect"
 image_name = "dataplatform"
-block_name = "default"
-name = "k8s"
+block_name = "aws-s3"
+name = "local-s3"
 queue_and_blocks_name = "default"
 ib = f"-ib process/{queue_and_blocks_name}"
 build = "prefect deployment build"
 queue_name = "default"
 wq = f"-q {queue_name}"
-sb = f"-sb github/random-git"
+sb = f"-sb s3/{block_name}"
 
 
 if __name__ == "__main__":
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     # save_block(process_block, queue_and_blocks_name)
 
     # Deploy FLOWS
-    bash(f"{build} {ib} {sb} {wq} -n {name} {cfg.maintenance_flow} -a --skip-upload")
+    bash(f"{build} {ib} {sb} {wq} -n {name} {cfg.maintenance_flow} -a ")
 
     # for flow in cfg.main_flows:
     #     tags = "-t parent"
