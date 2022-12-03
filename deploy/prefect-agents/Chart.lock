@@ -1,0 +1,9 @@
+dependencies:
+- name: prefect-orion
+  repository: https://prefecthq.github.io/prefect-helm/
+  version: 2022.11.11
+- name: prefect-agent
+  repository: https://prefecthq.github.io/prefect-helm/
+  version: 2022.11.11
+digest: sha256:f16e47c1a0c4364820f2e6899f3c7a84dc9b50d9da398601627069c80082935f
+generated: "2022-12-03T16:31:16.737616+01:00"

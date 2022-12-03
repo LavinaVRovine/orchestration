@@ -1,0 +1,13 @@
+
+prefect-agent:
+  agent:
+    apiConfig: orion
+    image:
+      debug: true
+    orionApiConfig:
+      apiUrl: http://prefect-orion.prefect.svc.cluster.local:4200/api
+
+
+
+
+

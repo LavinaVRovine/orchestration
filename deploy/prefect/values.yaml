@@ -1,0 +1,10 @@
+#postgresql:
+#  postgresqlPassword: prefect
+prefect-orion:
+
+  postgresql:
+    auth:
+      password: EE7vmxe39e
+
+
+
