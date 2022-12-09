@@ -27,6 +27,8 @@ if __name__ == "__main__":
     # save_block(process_block, queue_and_blocks_name)
 
     # Deploy FLOWS
+    bash(f"{build} {ib} {sb} {wq} -n local {cfg.maintenance_flow} -a --skip-upload")
+    ib = f"-ib kubernetes-job/{block_name}"
     bash(f"{build} {ib} {sb} {wq} -n {name} {cfg.maintenance_flow} -a --skip-upload")
 
     # for flow in cfg.main_flows:

@@ -1,7 +1,7 @@
 ###
 ### A complete description of a Prefect Deployment for flow 'maintenance'
 ###
-name: k8s
+name: local
 description: null
 version: f3deca7e8a9251bc4beb8f3bc6d9d42e
 # The work queue that will handle this deployment's runs
